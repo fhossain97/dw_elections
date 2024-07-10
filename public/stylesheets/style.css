@@ -1,0 +1,79 @@
+body {
+  font-family: sans-serif;
+}
+
+form {
+  width: 600px;
+  padding: 1em;
+  border: 1px solid #ccc;
+}
+
+form div + div {
+  margin-top: 1em;
+}
+
+label {
+  display: inline-block;
+  text-align: right;
+  margin-right: 0.3em;
+  margin-left: 1em;
+}
+
+label:first-of-type {
+  width: 90px;
+  margin-left: 0;
+}
+
+input {
+  font: 1em sans-serif;
+  box-sizing: border-box;
+  border: 1px solid #999;
+}
+
+input:focus {
+  border-color: #000;
+}
+
+.button {
+  padding-left: 90px;
+}
+
+button {
+  margin-left: 0.5em;
+}
+
+.elections-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.elections-table th,
+.elections-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.elections-table th {
+  background-color: #f2f2f2;
+}
+
+.elections-table a {
+  text-decoration: none;
+  color: blue;
+}
+
+.instructions ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.instructions ul li {
+  margin-bottom: 5px;
+}
+
+.methods {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}

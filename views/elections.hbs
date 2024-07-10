@@ -1,0 +1,62 @@
+{{!-- This page displays a table of the upcoming elections. --}}
+
+<div>
+  <h1>{{title}}</h1>
+  <table class="elections-table">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Election</th>
+        <th>Polling Link</th>
+        <th>Voting Methods</th>
+        <th>Voter Registration Methods</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each elections}}
+        <tr>
+          <td>{{this.date}}</td>
+          <td>{{this.description}}</td>
+          <td><a href="{{this.polling_url}}">{{this.polling_url}}</a></td>
+          <td>
+            {{#each this.methods}}
+            {{#each this.voting_methods}}
+              <div class="methods">
+                <ul>
+                  <li>Type: {{this.type}}</li>
+                  <li>Instructions: {{this.instructions}}</li>
+                  <li>Start Date Early Voting: {{this.startEV}}</li>
+                  <li>End Date Early Voting: {{this.endEV}}</li>
+                  <li>Ballet Link: <a href="{{this.ballet_url}}">{{this.ballet_url}}</a></li>
+                  <li>Ballet Deadline: {{this.ballet_deadline}}</li>
+                </ul>
+              </div>
+            {{/each}}
+          </td>
+          <td>
+            {{#each this.voter_registration_methods}}
+              <div class="methods">
+              <ul>
+                <li>Type: {{this.type}}</li>
+                <li>Instructions:</li>
+                <ul>
+                  <li>Registration: {{this.instructions.registration}}</li>
+                  <li>ID Info: {{this.instructions.id_info}}</li>
+                  <li>Race Info: {{this.instructions.race_info}}</li>
+                  <li>Requirements: {{this.instructions.requirements}}</li>
+                </ul>
+                <li>Online Voting Link: <a href="{{this.online_url}}">{{this.online_url}}</a></li>
+                <li>End Date In-Person: {{this.endIP}}</li>
+                <li>Mail Link: <a href="{{this.mail_url}}">{{this.mail_url}}</a></li>
+                <li>Mail Deadline: {{this.mail_deadline}}</li>
+              </ul>
+</div>
+            {{/each}}
+             {{/each}}
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+
